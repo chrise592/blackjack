@@ -1,17 +1,10 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# the project name
+# The project name
 project(blackjack)
 
-# the sources shared between the main program and the tests
-set(PROJECT_SOURCES hello.cpp hello.h)
-
-# the main program
-add_executable(blackjack main.cpp ${PROJECT_SOURCES})
-
-# the tests
-add_executable(tests testmain.cpp ${PROJECT_SOURCES})
+add_subdirectory(thirdparty/catch)
+add_subdirectory(thirdparty/gsl)
+add_subdirectory(src)
+add_subdirectory(test)
 

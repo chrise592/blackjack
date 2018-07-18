@@ -4,6 +4,7 @@
 #include <sstream>
 #include <iostream>
 #include "hello.h"
+#include <gsl/gsl>
 
 TEST_CASE( "hello() says hello" )
 {
