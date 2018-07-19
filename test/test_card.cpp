@@ -11,9 +11,9 @@ TEST_CASE( "default card constructor" )
 
 TEST_CASE( "Card::Flip()" )
 {
-    Card card(Card::rank::ACE, Card::suit::SPADES, false);
-    REQUIRE( card.GetValue() == 0);
+    Card card(Card::ACE, Card::SPADES, false);
+    REQUIRE( card.GetValue() == 0 );
     card.Flip();
-    REQUIRE( card.GetValue() == 1);
+    REQUIRE( card.GetValue() == 1 );
 }
 
